@@ -36,6 +36,12 @@ npm run dev
 ```
 The server will start on the port 3001 unless otherwise specified.
 
+# API documentation 
+- Please check 
+```file
+180 English Interview task.postman_collection.json
+```
+for full api documentation
 
 # Client - Vite + React App
 
