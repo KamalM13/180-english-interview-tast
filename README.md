@@ -16,7 +16,7 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/KamalM13/180-english-interview-tast.git
+git clone https://github.com/KamalM13/180-english-interview-test.git
 cd 180-english-interview-test
 cd server
 ```
