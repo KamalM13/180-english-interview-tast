@@ -12,8 +12,10 @@ export const getTodos = asyncHandler(async (req, res, next) => {
   }
 
   if (search) {
-    query.title = { $regex: search, $options: "i" };
-    query.description = { $regex: search, $options: "i" };
+    query.$or = [
+      { title: { $regex: search, $options: "i" } },
+      { description: { $regex: search, $options: "i" } },
+    ];
   }
 
   const todos = await Todo.find(query).sort({ createdAt: -1 });
