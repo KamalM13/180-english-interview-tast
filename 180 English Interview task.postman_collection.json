@@ -1,0 +1,320 @@
+{
+	"info": {
+		"_postman_id": "563050c7-1242-456b-9394-72f6914b9423",
+		"name": "180 English Interview task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33051251",
+		"_collection_link": "https://service-assignment-1.postman.co/workspace/Workspace~484c8b79-1e3e-4c22-832e-0021f0a087fb/collection/33051251-563050c7-1242-456b-9394-72f6914b9423?action=share&source=collection_link&creator=33051251"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kamal mohamed\",\r\n    \"email\": \"kamal@gmail.com\",\r\n     \"password\": \"kemo2003\",\r\n      \"role\": \"user\",\r\n      \"phone\": \"01030774446\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}auth/register",
+							"host": [
+								"{{api}}auth"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"kamal@gmail.com\",\r\n    \"password\": \"kemo2003\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}auth/login",
+							"host": [
+								"{{api}}auth"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Personal Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}user/me",
+							"host": [
+								"{{api}}user"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"kamal1@gmail.com\",\r\n    \"phone\": \"01030774446\",\r\n    \"name\": \"Kamal Mohamed Kamal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}user/details",
+							"host": [
+								"{{api}}user"
+							],
+							"path": [
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"kamal mohamed kamal\",\r\n    \"email\": \"kamal2@gmail.com\",\r\n    \"password\": \"kemo2003\",\r\n    \"role\": \"admin\",\r\n    \"phone\": \"01030445581\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}user/",
+							"host": [
+								"{{api}}user"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}user/68112ca35ad0990055c6193b",
+							"host": [
+								"{{api}}user"
+							],
+							"path": [
+								"68112ca35ad0990055c6193b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}user/all",
+							"host": [
+								"{{api}}user"
+							],
+							"path": [
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api}}user/68112e18bef3cf5c5bf589cf",
+							"host": [
+								"{{api}}user"
+							],
+							"path": [
+								"68112e18bef3cf5c5bf589cf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo",
+			"item": [
+				{
+					"name": "Todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}todo/?search=",
+							"host": [
+								"{{api}}todo"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Fix authentication bug\",\r\n    \"description\": \"Investigate and fix the login timeout issue reported in ticket #456\",\r\n    \"status\": \"in-progress\",\r\n    \"dueDate\": \"2025-04-30T16:00:00.000Z\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}todo/",
+							"host": [
+								"{{api}}todo"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}todo/6811304d7d06f3e57b4f56f7",
+							"host": [
+								"{{api}}todo"
+							],
+							"path": [
+								"6811304d7d06f3e57b4f56f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api}}todo/6811304d7d06f3e57b4f56f7/status",
+							"host": [
+								"{{api}}todo"
+							],
+							"path": [
+								"6811304d7d06f3e57b4f56f7",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
