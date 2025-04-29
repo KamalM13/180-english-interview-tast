@@ -16,7 +16,7 @@
 ### 1. Clone the repository
 
 ```bash
-[git clone https://github.com/your-username/your-repo-name.git](https://github.com/KamalM13/180-english-interview-tast.git)
+git clone https://github.com/KamalM13/180-english-interview-tast.git
 cd 180-english-interview-test
 cd server
 ```
@@ -25,7 +25,7 @@ cd server
 npm install
 ```
 3. Create a .env file in the root directory
-```bash
+```env
 MONGO_URI=your_mongodb_connection_string
 API_VERSION=v1
 JWT_SECRET=your_secret_key
